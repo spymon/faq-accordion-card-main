@@ -148,13 +148,12 @@ section {
   position: relative;
   font-size: 18px;
   font-weight: 400;
-  padding: 10px 0px;
+  padding: 10px 35px 10px 0;
   cursor: pointer;
   transition: 0.3s;
 }
 .accordion .questionBx.show .question {
   color: hsl(238, 29%, 16%);
-  font-size: 18px;
   font-weight: 600;
 }
 
@@ -298,6 +297,18 @@ section {
   }
 
   .accordion {
-    margin-top: 0;
+    margin-top: 10px;
+  }
+
+  .accordion h1 {
+    font-size: 24px;
+  }
+
+  .accordion .questionBx .question {
+    font-size: 16px;
+  }
+
+  .accordion .questionBx .answer p {
+    font-size: 12px;
   }
 }
