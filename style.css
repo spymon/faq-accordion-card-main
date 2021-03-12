@@ -144,6 +144,10 @@ section {
 }
 
 .accordion .questionBx .question {
+  width: 100%;
+  text-align: start;
+  border: none;
+  outline: none;
   color: hsl(240, 6%, 50%);
   position: relative;
   font-size: 18px;
@@ -157,7 +161,8 @@ section {
   font-weight: 600;
 }
 
-.accordion .questionBx .question:hover {
+.accordion .questionBx .question:hover,
+.accordion .questionBx .question:focus {
   color: hsl(14, 88%, 65%);
 }
 
