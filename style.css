@@ -56,12 +56,12 @@ Background gradient:
 
 body {
   font-family: 'Kumbh Sans', sans-serif;
+  background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
 }
 
 section {
-  background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -101,6 +101,11 @@ section {
   height: 100%;
   border-radius: 30px;
   overflow: hidden;
+}
+
+.bg-pattern-mobile,
+.imgBxMobile {
+  display: none;
 }
 
 .bg-pattern img {
@@ -201,5 +206,98 @@ section {
   }
   to {
     transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    padding: 100px 30px 20px;
+    margin: 30px;
+    margin-top: 220px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+  }
+  .imgBx,
+  .bg-pattern,
+  .floating-box {
+    display: none;
+  }
+  .imgBxMobile,
+  .bg-pattern-mobile {
+    pointer-events: none;
+    margin: 0 auto;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 20;
+  }
+
+  .bg-pattern-mobile {
+    top: 0px;
+    border-radius: 30px;
+    overflow: hidden;
+    z-index: 10;
+  }
+
+  .imgBxMobile img {
+    margin: 0 auto;
+    width: 463px;
+    margin-top: 20px;
+    position: relative;
+    top: -300px;
+    left: -25px;
+  }
+
+  .bg-pattern-mobile img {
+    width: 440px;
+    position: relative;
+    top: -40px;
+    margin-bottom: 20px;
+  }
+
+  .accordion {
+    margin-top: 100px;
+  }
+
+  .accordion h1 {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .imgBxMobile img {
+    top: -261px;
+    width: 363px;
+  }
+
+  .bg-pattern-mobile img {
+    width: 350px;
+    left: -5px;
+  }
+
+  .accordion {
+    margin-top: 70px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .imgBxMobile img {
+    top: -215px;
+    width: 250px;
+    left: -15px;
+  }
+
+  .bg-pattern-mobile img {
+    width: 260px;
+    left: -4px;
+    top: -29px;
+  }
+
+  .accordion {
+    margin-top: 0;
   }
 }
